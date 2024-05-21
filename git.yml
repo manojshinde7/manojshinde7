@@ -1,0 +1,9 @@
+---
+- name: Restart httpd service
+  hosts: devserver
+  become: yes
+  tasks:
+    - name: Ensure httpd service is restarted
+      service:
+        name: httpd
+        state: restarted
